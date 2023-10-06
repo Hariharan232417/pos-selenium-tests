@@ -39,8 +39,11 @@ public class DriverInstance{
 			dc.setBrowserName("chrome");
 			dc.setPlatform(Platform.LINUX);
 			options.merge(dc);
+			
+			String ipAddress = System.getProperty("ipAddress", "20.244.25.59");
 
-			remoteWebdriver.set(new RemoteWebDriver(new URL("http://98.70.2.122:4444/wd/hub"), options));
+			remoteWebdriver.set(new RemoteWebDriver(new URL("http://"+ipAddress+":4444/wd/hub"), options));
+			//remoteWebdriver.set(new ChromeDriver(options));
 			break;
 		case "firefox":
 			FirefoxOptions firefoxOptions = new FirefoxOptions();

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test parallel="methods" name="chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pos.testcases.CreateNewVendor">
+        <methods>
+          <include name="postCondition"/>
+          <include name="runLogin" invocation-numbers="0"/>
+          <include name="endResult"/>
+          <include name="startReport"/>
+          <include name="setValues"/>
+          <include name="preCondition"/>
+          <include name="startTestCase"/>
+        </methods>
+      </class> <!-- com.pos.testcases.CreateNewVendor -->
+    </classes>
+  </test> <!-- chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
